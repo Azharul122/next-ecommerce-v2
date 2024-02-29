@@ -1,0 +1,22 @@
+/* SkeletonProduct.module.css */
+.cardContainer {
+    /* Add any additional styling for the card container */
+    margin: 10px;
+  }
+  
+  .skeletonImage {
+    /* Styling for the skeleton image */
+    margin-bottom: 2px;
+  }
+  
+  .skeletonText {
+    /* Styling for the skeleton text */
+  }
+  
+  .skeletonFlex {
+    /* Styling for the flex container */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

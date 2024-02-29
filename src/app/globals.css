@@ -8,20 +8,45 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav {
+  position: relative;
+}
+.nav::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: #6b26b7;
+  bottom: -5px;
+  left: 0;
+  transition: 0.5s;
+}
+.activeClass {
+  position: relative;
+  color: #6b26b7;
+  font-size: large;
+}
+.activeClass::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: #6b26b7;
+  bottom: -5px;
+  left: 0;
+  transition: 0.2s;
+}
+.nav:hover::after {
+  width: 100%;
+}
+.activeClass:hover::after {
+  width: 100%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.no-scroll {
+  overflow: hidden;
 }
+
+
+
+
