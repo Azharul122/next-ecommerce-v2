@@ -3,7 +3,8 @@ import axios from "axios";
 import ProductDetails from "../../Components/ProductDetails";
 const getSingleProductData = async (id) => {
     try {
-        const { data } = await axios.get(`/api/products/single-product?id=${id}`);
+        const { data } = await axios.get(`https://next-ecommerce-v2-iota.vercel.app/api/products/single-product?id=${id}`);
+        console.log(data)
         return data?.data;
     } catch (error) {
         console.error("Error fetching product data:", error);
