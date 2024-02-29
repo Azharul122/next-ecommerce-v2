@@ -31,7 +31,7 @@ const NewProducts = () => {
     // Fetch data
 
     axios
-      .get("http://localhost:3000/api/products/all-products")
+      .get("/api/products/all-products")
       .then((data) => {
         // Set newProducts in the state
         setNewProducts(data.data.data);
